@@ -12,4 +12,5 @@ kendala yang saya alami yaitu ketika saya ingin run ternyata run nya tidak terja
 - Bagian yang dibantu AI: AI membantu saya saat pengujian ketika error
 - Prompt utama: 1. kenp ini tidak dapat dijalankan, 2.Kenapa hasilnya bisa error berikan solusinya(saya  paste bagian mana saja yg error)
 - Yang saya ubah atau tolak dari saran AI, ya ketika ai memberikan kode terlalu banyak dan tidak sesuai dengan materi atau yang diajarkan dan membuat bingung ,jika bingung saya akan bertanya kpd teman saya
-- Satu hal yang saya pahami lebih baik sekarang: lebih paham mengenai perbedaan ketiga paradigma tersebut
+- Satu hal yang saya pahami lebih baik sekarang: lebih paham mengenai perbedaan ketiga paradigma tersebut.
+

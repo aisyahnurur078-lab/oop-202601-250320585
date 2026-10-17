@@ -17,3 +17,5 @@ public final class HelloProsedural {
         System.out.println(sapa(v.nama, v.nim));
     }
 }
+
+

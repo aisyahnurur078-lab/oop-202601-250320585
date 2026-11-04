@@ -1,18 +1,41 @@
 package id.ac.upb.asetpinjam.model;
 
-/** Minggu 3: aset berupa ruang. Kapasitas harus lebih dari 0 (IllegalArgumentException). */
 public class Ruang extends Aset {
 
-    // TODO minggu 3: field kapasitas.
+    private int kapasitas;
+    private TingkatRisiko tingkatRisiko;
 
     public Ruang(String kode, String nama, int kapasitas) {
+        this(kode, nama, kapasitas, TingkatRisiko.RENDAH);
+    }
+
+    public Ruang(String kode, String nama, int kapasitas, TingkatRisiko tingkatRisiko) {
         super(kode, nama);
-        throw new UnsupportedOperationException("TODO minggu 3: konstruktor Ruang");
+        if (kapasitas <= 0) {
+            throw new IllegalArgumentException("Kapasitas harus lebih dari 0");
+        }
+        if (tingkatRisiko == null) {
+            throw new IllegalArgumentException("Tingkat risiko tidak boleh null");
+        }
+        this.kapasitas = kapasitas;
+        this.tingkatRisiko = tingkatRisiko;
     }
 
     public int getKapasitas() {
-        throw new UnsupportedOperationException("TODO minggu 3");
+        return kapasitas;
     }
 
-    // TODO minggu 3: override getJenis(). Minggu 4: override hitungDenda(int).
+    public TingkatRisiko getTingkatRisiko() {
+        return tingkatRisiko;
+    }
+
+    @Override
+    public JenisAset getJenis() {
+        return JenisAset.RUANG;
+    }
+
+    @Override
+    public long hitungDenda(int hariTerlambat) {
+        return hariTerlambat * 5000L;
+    }
 }

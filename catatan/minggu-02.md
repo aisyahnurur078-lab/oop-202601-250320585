@@ -1,5 +1,5 @@
 # Catatan Minggu 02: Struktur OOP: Class, Object, Encapsulation
-
+                                                                                                                                                                 
 ## Yang saya kerjakan
 Saya menjalankan perintah yang terdapat di core/src/main/java/id/ac/upb/asetpinjam/model/Aset.java, seperti membuat class Aset, membuat field private (kode, nama, status, dan kondisi), terus saya membuat kontruktor dengan validasi null agar nilainya tidak kosong dan  saya juga  membuat getter untuk membaca data dan setter untuk ubah nama, status, dan validasi agar isisnya tidak kosong.
 

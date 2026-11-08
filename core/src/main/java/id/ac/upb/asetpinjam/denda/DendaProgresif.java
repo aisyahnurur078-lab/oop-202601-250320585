@@ -13,6 +13,29 @@ public class DendaProgresif implements AturanDenda {
 
     @Override
     public long hitung(Aset aset, int hariTerlambat) {
-        throw new UnsupportedOperationException("TODO minggu 5: DendaProgresif.hitung");
+        if (aset == null) {
+            throw new IllegalArgumentException("Aset tidak boleh null");
+        }
+        if (hariTerlambat < 0) {
+            throw new IllegalArgumentException("Hari keterlambatan tidak boleh negatif: " + hariTerlambat);
+        }
+        if (hariTerlambat == 0) {
+            return 0L;
+        }
+
+        long flat = aset.hitungDenda(hariTerlambat);
+        long basePerHari = aset.hitungDenda(1);
+        long tambahan = 0L;
+
+        if (hariTerlambat > 7) {
+            int hariTier2 = Math.min(hariTerlambat, 14) - 7;
+            tambahan += (long) hariTier2 * (basePerHari / 2);
+        }
+        if (hariTerlambat > 14) {
+            int hariTier3 = hariTerlambat - 14;
+            tambahan += (long) hariTier3 * basePerHari;
+        }
+
+        return flat + tambahan;
     }
 }

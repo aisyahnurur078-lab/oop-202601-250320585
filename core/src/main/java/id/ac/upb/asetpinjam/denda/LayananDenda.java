@@ -8,15 +8,17 @@ import id.ac.upb.asetpinjam.model.Aset;
  * (bukan dibuat di dalam kelas ini), sehingga bisa diganti tanpa mengubah kelas ini.
  */
 public class LayananDenda {
+ private final AturanDenda aturan;
 
-    // TODO minggu 10: simpan AturanDenda dalam field final.
-
-    /** TODO minggu 10: aturan tidak boleh null (IllegalArgumentException). */
+    /** Aturan tidak boleh null (IllegalArgumentException). */
     public LayananDenda(AturanDenda aturan) {
-        throw new UnsupportedOperationException("TODO minggu 10: konstruktor LayananDenda");
+        if (aturan == null) {
+            throw new IllegalArgumentException("Aturan denda tidak boleh null");
+        }
+        this.aturan = aturan;
     }
 
     public long hitung(Aset aset, int hariTerlambat) {
-        throw new UnsupportedOperationException("TODO minggu 10: LayananDenda.hitung");
+        return aturan.hitung(aset, hariTerlambat);
     }
 }
